@@ -3,6 +3,9 @@ import { View, Text, TextInput, Button, FlatList  } from 'react-native';
 import axios from 'axios';
 import styled from 'styled-components/native';
 
+
+
+
 interface Orca {
   id: number;
   habitat: string;
@@ -99,50 +102,50 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, padding: 20 }}>
-      <Text style={{ fontSize: 24, marginBottom: 10 }}>Cadastrar Orca</Text>
+      <Text style={{ fontSize: 24, marginBottom: 10, textAlign: "center",  }}>Cadastrar Orca</Text>
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Habitat"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10 }}
+        placeholder=" Habitat"
         value={habitat}
         onChangeText={setHabitat}
       />
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Comida favorita"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10  }}
+        placeholder=" Comida favorita"
         value={comidaFavorita}
         onChangeText={setcomidaFavorita}
       />
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Descrição"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10  }}
+        placeholder=" Descrição"
         value={descricao}
         onChangeText={setDescricao}
         
       />
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Sexo"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10  }}
+        placeholder=" Sexo"
         value={sexo}
         onChangeText={setSexo}
       />
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Domestico"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10  }}
+        placeholder=" Domestico"
         value={domestico}
         onChangeText={setDomestico}
       />
       <Button title="Cadastrar" onPress={handleCreate} />
 
-      <Text style={{ fontSize: 24, marginTop: 20, marginBottom: 10 }}>Pesquisar Orca</Text>
+      <Text style={{ fontSize: 24, marginTop: 20, marginBottom: 10, textAlign: "center", }}>Pesquisar Orca</Text>
       <TextInput
-        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10 }}
-        placeholder="Pesquisar"
+        style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 10, padding: 5, borderRadius: 10  }}
+        placeholder=" Pesquisar"
         value={searchText}
         onChangeText={setSearchText}
       />
       <Button title="Pesquisar" onPress={handleSearch} />
 
-      <Text style={{ fontSize: 24, marginTop: 20, marginBottom: 10 }}>Lista de Orcas</Text>
+      <Text style={{ fontSize: 24, marginTop: 20, marginBottom: 10, textAlign: "center", }}>Lista de Orcas</Text>
       <FlatList
         data={orcas}
         keyExtractor={(orca: any) => String(orca.id)}
